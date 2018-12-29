@@ -1,0 +1,118 @@
+body,html{
+    height: 100%;
+  margin: 0;
+}
+
+#bg{
+    background-image: url("game_bg1.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size: cover;
+   
+}
+#characterDiv{
+    background-color:transparent;
+    width: 20%;
+    height: 8%;
+ 
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+#characterName{
+    margin-top: 0%;
+    margin-left:40%;
+}
+.Bars
+{
+    border-radius:40%;
+    background-color: #26301D;
+    width: 80%;
+    height: 50%;
+    
+
+}
+#healthBG
+{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+#healthBar{   
+    background-color: #27C422;
+    width: 60%;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+#enemyDiv
+{
+    background-color:transparent;
+    width: 20%;
+    height: 8%;
+ 
+    position: absolute;
+    right: 75%;
+    top: 5%;
+}
+#enemyName{
+    
+    margin-top: 0%;
+    margin-left:40%;
+}
+#enemyhealthBG
+{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+#enemyhealthBar{   
+    background-color: #27C422;
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+
+#myCharacter{
+   
+    /* transform: rotateY(180deg); */
+    height: 16%;
+    width: 9%;
+    position: absolute;
+    right:  5%;
+    bottom : 12%;
+
+}
+
+#enemyTank{
+    height: 12%;
+    width: 9%;
+
+    position: absolute;
+    right:  88%;
+    bottom : 12%;
+}
+
+#bulletFlame
+{
+    /* transform: rotateY(90deg); */
+    display: none;
+    height: 4%;
+    width:2%;
+    position: absolute;
+    right : 13.5%;
+    bottom: 22%
+}
+
+#EnmenyBulletFlame
+{
+    transform: rotateY(180deg);
+    display: none;
+    height: 4%;
+    width:2%;
+    position: absolute;
+    right : 86.5%;
+    bottom: 19.5%
+}
