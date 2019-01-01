@@ -1,0 +1,302 @@
+
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.bgdiv
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   
+} 
+.bgdiv>img{
+   opacity: 0.65;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 
+
+#charbtn
+{
+    background-color: rgb(223, 142, 142);
+    border-radius: 15px;
+    margin-left: 23%;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 40px;
+
+}
+#charbtn:hover
+{
+    background-color: rgba(201, 120, 218, 0.274);
+    
+}
+
+
+
+
+#lvlbtn
+{
+    background-color: rgb(223, 142, 142);
+    border-radius: 15px;
+    margin-left: 30%;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 40px;
+
+}
+#lvlbtn:hover
+{
+    background-color: rgba(201, 120, 218, 0.274); 
+}
+
+#charcontainer
+{   
+    width: 20%; 
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    border-radius: 30%;
+}
+
+
+#tankTextDiv
+{
+    color: rgb(36, 17, 54);
+    font-family: cursive;
+    height: 40%; 
+    width: 140%;
+    /* background-color: black; */
+    position: absolute;
+    top: -43%;
+    left: -30%;
+     border-radius: 15%;    
+} 
+
+.tanks img{
+    height: 50%;
+    width: 45%;
+    transition: width 2s, height 2s;
+    /* z-index: 2; */
+    position: relative;
+    margin-top: 12%;
+}
+.tanks img:hover{
+    
+        width: 65%;
+        height: 65%;
+        z-index: 2;
+      
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+ 
+  }
+.arrowbtns
+  {
+    
+    display: flex;
+    top: 46%;
+    position: relative;
+    width: 100%;
+    left: -20%;
+  }
+
+#charprev
+{
+color:rgb(202, 0, 0);
+ background-color: rgb(36, 17, 54);  
+transition: 0.6s ease;
+border-radius: 25%;
+border: none;
+width: 80px;
+height: 50px;
+}
+
+#charprev:hover
+{
+
+    background-color: rgb(169, 116, 219);
+}
+
+#charnxt
+{
+color:rgb(202, 0, 0);
+background-color: rgb(36, 17, 54); 
+transition: 0.6s ease;
+border-radius: 25%;
+border: none;
+width: 80px;
+height: 50px;
+margin-left:81%;
+
+}
+
+#charnxt:hover
+{
+
+    background-color: rgb(169, 116, 219);
+}
+  .sumbitBtn
+  {
+    border: none;
+    height: 7%;
+    width: 12%;
+    color:rgb(202, 0, 0);
+    background-color: rgb(36, 17, 54); 
+    border-radius: 15%;
+  }
+
+  .sumbitBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
+  }
+
+  #doneBtn
+  {
+      position: absolute;
+      bottom: 35%;
+      left: 30%;
+      color:rgb(202, 0, 0);
+  }
+
+  #doneBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
+  }
+
+  #battleBtn
+  {
+    position: absolute;
+    bottom: 10%;
+    right: 42%;
+    color:rgb(202, 0, 0);
+  }
+
+  #battleBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
+  }
+
+  /* ////////////////level style//////////// */
+#lvlcontainer
+{
+    /* height: 18%;
+    position: absolute;
+    top: 20%;
+    width: 20%;
+    right: 20%;
+    border-radius: 30%; */
+    width: 20%;
+    position: absolute;
+    top: 28%;
+    right: 19%;
+    border-radius: 30%;
+}
+#lvlTextDiv
+{
+    color: rgb(36, 17, 54);
+    font-family: cursive;
+    height: 48%;
+    width: 140%;
+    position: absolute;
+    top: -98%;
+    left: -19%;
+    border-radius: 15%;   
+} 
+#lvlprev
+{
+color:rgb(202, 0, 0);
+background-color: rgb(36, 17, 54); 
+transition: 0.6s ease;
+border-radius: 25%;
+border: none;
+width: 80px;
+height: 50px;
+
+
+}
+
+#lvlprev:hover
+{
+
+    background-color: rgb(169, 116, 219);
+}
+
+#lvlnxt
+{
+color:rgb(202, 0, 0);
+background-color:  rgb(36, 17, 54); 
+transition: 0.6s ease;
+border-radius: 25%;
+border: none;
+width: 80px;
+height: 50px;
+margin-left:81%;
+
+}
+
+#lvlnxt:hover
+{
+    background-color: rgb(169, 116, 219);
+}
+
+.levels img{
+
+    width: 63%;
+    transition: width 2s, height 2s;
+    z-index: 2; 
+    position: relative;
+  
+
+}
+
+
+.levels img:hover{
+    
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+  
+}
+
+.fade {
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+ 
+  }
+
+#lvlDoneBtn
+{
+    position: absolute;
+    bottom: 35%;
+    right: 27%;
+    color:rgb(202, 0, 0);
+}
+#lvlDoneBtn:hover
+{
+    color:rgb(202, 0, 0);
+    background-color:  rgb(169, 116, 219);
+}

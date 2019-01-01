@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="ChooseUrChar.css" />
+
+</head>
+
+<body>
+ <div class="bgdiv">
+                <img src="bg.jpg" alt="">
+
+                <div id="charcontainer" >
+                        <div id="tankTextDiv">
+                            <h1 id="tankTextChoose" >Choose Your Tank:</h1>    
+                        </div>
+                        <div class="tanks fade">
+                                <img src="tank1.png" alt="tank1">
+
+                        </div>
+
+
+                        <div style="display:none;" class="tanks fade">
+                                <img src="tank2.png" alt="tank2">
+
+                        </div>
+
+                        <div style="display:none;" class="tanks fade">
+                                <img src="tank3.png" alt="tank3">
+
+                        </div>
+                        <div  class="arrowbtns">
+                                <input type="button" id="charprev" value="&#10094;" name="prev">
+                                <input type="button" id="charnxt" value="&#10095;" name="nxt">
+
+                        </div>
+                      
+
+                </div>
+
+                <!-- <div class="tooltip">credits
+                        <span class="tooltiptext">Here the credits would be shown </span>
+                      </div> -->
+                
+                        <input type="button" class="sumbitBtn" id="doneBtn" name="" value="DONE">
+
+                        <a href=""> <input type="button" class="sumbitBtn" id="battleBtn" name="" value="To The BATTLE"> </a>
+        
+ 
+  
+<div id="lvlcontainer" >
+         <div id="lvlTextDiv">
+           <h1 id="lvlTextChoose" >Choose Your level:</h1>    
+          </div>     
+        <div class="levels fade">
+        <img src="game_bg1.jpg" class="levelImages"alt="lvl1"  >                   
+        </div>
+                                              
+        <div style="display:none;" class="levels fade">
+        <img src="game_bg2.png" alt="lvl2"  >      
+        </div>
+                            
+        <div style="display:none;" class="levels fade">
+        <img  src="game_bg3.jpg" alt="lvl3" >                             
+        </div>
+        <div  class="arrowbtns">                 
+        <input  type="button"  id="lvlprev" value="&#10094;" name="prev">
+        <input  type="button"  id="lvlnxt" value="&#10095;" name="nxt">
+        </div>                           
+ </div>                     
+        
+       
+        <input type="button" class="sumbitBtn" id="lvlDoneBtn" name="" value="DONE">        
+
+ </div>
+        <script src=ChooseUrChar.js></script>
+      
+
+</body>
+
+</html>
