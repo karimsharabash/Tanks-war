@@ -31,6 +31,8 @@ defineEnmeyTank();
 //////////////////////////////////////////////
 
 var bulletFlame=document.getElementById("bulletFlame");
+var bullet=document.getElementById("bullet");
+
 var bullentFlamePos;
 
 var enemyBulletFlame =document.getElementById("enemyBulletFlame");
@@ -84,7 +86,10 @@ function movePlayerTank(event)
     }else if(event.keyCode == 32)  // space 
     {
        bulletFlame.style.display="block"; 
-       setTimeout(hideShot,400);          
+       bullet.style.display="inline";
+       setTimeout(hideShot,400);
+       setTimeout(showBullet,100);  
+       setTimeout(hideBullet,5000);
     }
  
     bullentFlamePos=playerTanksList[playerTankIndex].position+8
@@ -97,4 +102,12 @@ function hideShot()
     bulletFlame.style.display="none"; 
 }
 
+function showBullet()
+{
+    bullet.style.display="block"; 
+}
+function hideBullet()
+{
+    bullet.style.display="none"; 
+}
 ///////////////////////////////////////////////
