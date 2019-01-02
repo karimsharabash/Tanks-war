@@ -115,17 +115,23 @@ body,html{
     width:2%;
     position: absolute;
     right : 86.5%;
-    bottom: 19.5%
+    bottom: 19.5%;
 }
 
-#bullet
-{
-    display: none;
+.bullet{
+    /* display: none; */
     background-color: black;
     width: 1.5%;
     height: 2.5%;
     border-radius:50% ;
-    position: absolute;
+}
+
+
+#playerBullet
+{
+  
+
+    display: none;
     position: absolute;
     right : 13%;
     bottom: 22%;
@@ -139,7 +145,7 @@ body,html{
 .bulletCurve
 {
     
-    animation: bulletCurveAnime 5s ; 
+    animation: bulletCurveAnime 4s ; 
    
    
 }
@@ -152,11 +158,33 @@ body,html{
       transform:rotate(-180deg); 
     }
   }
-  
-/* @keyframes bulletCurve {
-    from {  transform: rotate(0deg) translateX(120px) rotate(180deg); }
-    to   {transform: rotate(180deg) translateX(120px) rotate(180deg); }
-} */
+
+#enemyBullet
+{
+    display: none;
+ 
+    position: absolute;
+    right : 88%;
+    bottom: 22%;
+    transform-origin: 2500% 250%; 
+}
+
+.enemyBulletCurve
+{
+    
+    animation: enemyBulletCurveAnime 4s ; 
+   
+   
+}
+
+@keyframes enemyBulletCurveAnime {
+    from {
+      transform:rotate(0deg); 
+    }
+    to { 
+      transform:rotate(180deg); 
+    }
+  }
 
 #begImg
 {

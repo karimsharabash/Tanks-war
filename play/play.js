@@ -1,8 +1,8 @@
 var playerTankImage =document.getElementById("myCharacter");
 var enemyTankImage  =document.getElementById("enemyTank");
-var bulletPath = document.getElementById("bullet");
+var bulletPath = document.getElementById("playerBullet");
 var curve=-2500;
-var bulletFired =0;
+var bulletFired=0;
 var flag=0;
 var totalShotsCount=0;
 
@@ -136,9 +136,9 @@ function movePlayerTank(event)
      
     }    break;
     case 32:  // space
-    bullet.style.right =bullentFlamePos+"%"; 
-       bullet.style.display="block";
-       bulletPath.className ="bulletCurve";
+    bulletPath.style.right =bullentFlamePos+"%"; 
+    bulletPath.style.display="block";
+       bulletPath.classList.add("bulletCurve")
        bulletFlame.style.display="block"; 
        setTimeout(hideShot,200);
        if(bulletFired ==0)
@@ -163,8 +163,11 @@ function hideShot()
 
 function initBulletCurve()
 {
-    bullet.style.display="none";
+    bulletPath.style.display="none";
     bulletPath.classList.remove("bulletCurve");
     bulletFired=0;
+    enemyTurn();
+    
 }
 ///////////////////////////////////////////////
+
