@@ -3,14 +3,14 @@ body,html{
   margin: 0;
 }
 
-#bg{
+/*#bg{
     background-image: url("game_bg1.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
   background-size: cover;
    
-}
+}*/
 #characterDiv{
     background-color:transparent;
     width: 20%;
@@ -115,4 +115,32 @@ body,html{
     position: absolute;
     right : 86.5%;
     bottom: 19.5%
+}
+@keyframes move-bullet {
+  from {
+    transform: rotate(-45deg);
+  }
+  
+  to {
+    transform: rotate(135deg);
+  }
+}
+
+#bullet {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  margin: 200px;
+  animation: move-bullet 5s;
+  display:none;
+}
+
+#bullet::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0;
+  border-radius: 50%;
+
 }
