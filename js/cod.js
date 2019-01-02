@@ -1,7 +1,7 @@
 
 var container = document.getElementById('container'),
 		
-		firstStep = document.getElementById('first-step'),
+		firstStep = document.getElementById('loginPageDiv'),
 		secondStepContent = `
 													<div id="second-step">
 														<p>Second Step</p>
@@ -30,18 +30,19 @@ window.onclick = function(event) {
 }
 
 //takes the username and check that it has atleast 3 chachters and never starts with a digit 
-var username = document.getElementById("player-name").name;
-username.addEventListener('click',submit())
-var fn submit(){
-		var mainval = username;
+var userName = document.getElementById("playerName").name;
+var popUp = document.getElementById("errorDiv")
+userName.addEventListener('click',submit());
+var fn =submit(){
+		var mainval = userName;
 	}
-console.log(username);
-var check = function (username){
+console.log(userName);
+var check = function (userName){
 	if(username.length<3){
 		alert("Please Enetr a valid name");
-	}else if(username[0]==0||username[0]==1||username[0]==2||username[0]==3||username[0]==4||username[0]==5||username[0]==6||username[0]==7||username[0]==8||username[0]==9)
+	}else if(userName[0]==0||userName[0]==1||userName[0]==2||userName[0]==3||userName[0]==4||userName[0]==5||userName[0]==6||userName[0]==7||userName[0]==8||userName[0]==9)
 	{
-		alert("Please enter a valid war name");
+		popUp.style.display="block";
 	}
 }
 

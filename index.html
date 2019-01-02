@@ -34,15 +34,21 @@
 			<div class="box-form">
 				<form action="">
 					<div class="form-group">
-						<label for="player-name">Player Name</label><br />
-						<input type="text" id="player-name" class="text-input" />
+						<label for="playerName">Player Name</label><br />
+						<input type="text" id="playerName" class="text-input" />
 					</div>
 					<div class="form-group">
 						<a href="#" class="btn" id="play-btn">Play</a>
 					</div>
 				</form>
-
+				
 			</div> <!-- form -->
+			<!-- pop up for error name -->
+			<div class="errorDiv" id="errorDiv">
+				<form>
+						<h3>Please enter a valid name</h3>
+				</form>
+			</div>
 			
 			<footer>
 				<a href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">Credits</a>
