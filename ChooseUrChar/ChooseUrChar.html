@@ -7,12 +7,33 @@
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="ChooseUrChar.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="badgesfunc.css" />
 
 </head>
 
 <body>
  <div class="bgdiv">
                 <img src="bg.jpg" alt="">
+
+
+                <div class="dropDown">
+                        <button class="dropBtn">Badges</button>
+                        <div class="dropDown-content" >
+                       <div id="badgeModal" class="badgeModal">
+                        <div class="description">
+                      <span class="closeBadge">&times;</span>
+                         <p id="badgeDesc"></p>
+                        </div>
+                       </div>                          
+                       
+
+                          <img id="badge1" src="badge1.png">
+                          <img id="badge2" src="badge2.png">
+                          <img id="badge3" src="badge3.png">
+                          <img id="badge4" src="badge4.png">
+                        
+                        </div>
+                      </div>
 
                 <div id="charcontainer" >
                         <div id="tankTextDiv">
@@ -78,6 +99,7 @@
 
  </div>
         <script src=ChooseUrChar.js></script>
+        <script src=badgesfunc.js></script>
       
 
 </body>
