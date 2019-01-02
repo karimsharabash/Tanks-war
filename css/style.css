@@ -17,7 +17,7 @@ body {
 }
 
 .body-bg {
-  background-image: url("../img/tankswar2.jpeg");
+  background-image: url("../img/bg(1).jpg");
   background-position: center top;
   background-repeat: no-repeat;
 	background-size: cover;
@@ -28,7 +28,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .heading {
@@ -45,6 +45,13 @@ body {
   margin: 0 auto;
   padding: 30px 30px;
   border-radius: 10px;
+}
+.errorDiv{
+  align-content: center;
+  text-align: center;
+  color: red;
+  background: gray;
+  display: none;
 }
 
 .text-input {
