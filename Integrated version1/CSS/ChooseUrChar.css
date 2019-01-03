@@ -1,10 +1,4 @@
 
-body
-{
-    padding: 0;
-    margin: 0;
-}
-
 .bgdiv
 {
    display: block;
@@ -13,7 +7,7 @@ body
    
 } 
 .bgdiv>img{
-   opacity: 0.65;
+   opacity: 0.7;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -68,6 +62,7 @@ body
 #tankTextDiv
 {
     color: rgb(36, 17, 54);
+    font-family: cursive;
     height: 40%; 
     width: 140%;
     /* background-color: black; */
@@ -78,16 +73,17 @@ body
 } 
 
 .tanks img{
-    height: 55%;
-    width: 50%;
+    height: 50%;
+    width: 45%;
     transition: width 2s, height 2s;
-    /* z-index: 2;  */
+    /* z-index: 2; */
     position: relative;
+    margin-top: 12%;
 }
 .tanks img:hover{
     
-        width: 80%;
-        height: 80%;
+        width: 65%;
+        height: 65%;
         z-index: 2;
       
 }
@@ -107,11 +103,11 @@ body
 .arrowbtns
   {
     
-      display: flex;
-      top: 46%;
-      position: relative;
-      width: 100%;
-      left: -15%;
+    display: flex;
+    top: 46%;
+    position: relative;
+    width: 100%;
+    left: -20%;
   }
 
 #charprev
@@ -151,18 +147,33 @@ margin-left:81%;
 }
   .sumbitBtn
   {
+    font: bold;
     border: none;
     height: 7%;
     width: 12%;
-    color: rosybrown;
+    color:rgb(202, 0, 0);
     background-color: rgb(36, 17, 54); 
     border-radius: 15%;
+    font-weight: bold;
+    font: bold;
   }
+
+  .sumbitBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
+  }
+
   #doneBtn
   {
       position: absolute;
       bottom: 35%;
       left: 30%;
+      color:rgb(202, 0, 0);
+  }
+
+  #doneBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
   }
 
   #battleBtn
@@ -170,28 +181,39 @@ margin-left:81%;
     position: absolute;
     bottom: 10%;
     right: 42%;
+    color:rgb(202, 0, 0);
+  }
+
+  #battleBtn:hover
+  {
+      background-color:  rgb(169, 116, 219);
   }
 
   /* ////////////////level style//////////// */
 #lvlcontainer
 {
-    height: 18%;
+    /* height: 18%;
     position: absolute;
     top: 20%;
     width: 20%;
     right: 20%;
+    border-radius: 30%; */
+    width: 20%;
+    position: absolute;
+    top: 28%;
+    right: 19%;
     border-radius: 30%;
 }
 #lvlTextDiv
 {
     color: rgb(36, 17, 54);
-    height: 40%; 
+    font-family: cursive;
+    height: 48%;
     width: 140%;
-    
     position: absolute;
-    top: -66%;
-    left: -30%;
-     border-radius: 15%;    
+    top: -98%;
+    left: -19%;
+    border-radius: 15%;   
 } 
 #lvlprev
 {
@@ -231,27 +253,28 @@ margin-left:81%;
 }
 
 .levels img{
-    
-  
- 
-    width: 55%;
+
+    width: 63%;
     transition: width 2s, height 2s;
-    /* z-index: 2;  */
+    z-index: 2; 
     position: relative;
+  
 
 }
 
 
 .levels img:hover{
     
-    width: 100%;
+    width: 80%;
     height: 80%;
-    /* z-index: 2; */
+    z-index: 2;
   
 }
 
 .fade {
 
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1s;
   }
@@ -267,4 +290,10 @@ margin-left:81%;
     position: absolute;
     bottom: 35%;
     right: 27%;
+    color:rgb(202, 0, 0);
+}
+#lvlDoneBtn:hover
+{
+    color:rgb(202, 0, 0);
+    background-color:  rgb(169, 116, 219);
 }

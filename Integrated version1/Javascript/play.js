@@ -1,6 +1,10 @@
 var playerTankImage =document.getElementById("myCharacter");
 var enemyTankImage  =document.getElementById("enemyTank");
-
+var bulletPath = document.getElementById("playerBullet");
+var curve=-2500;
+var bulletFired=0;
+var flag=0;
+var totalShotsCount=0;
 
 var tank = function (id,positionX,img,$size,positionY,toFlip )
 {
@@ -14,25 +18,23 @@ var tank = function (id,positionX,img,$size,positionY,toFlip )
 
 ///////////////////////
 ////////////player tanks attributes///////////
-var tank1 =  new tank(0,5,"../anks/tank1.png","15%","12%",true);
-var tank2 =  new tank(1,5,"../tanks/tank2.png","23%","9%",true);
-var tank3 = new tank(2,5,"../tanks/tank3.png","17%","12%",false);
+var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
+var tank2 =  new tank(1,5,"../images/tank2.png","23%","9%",true);
+var tank3 = new tank(2,5,"../images/tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
-var playerTankIndex =0;
+var playerTankIndex =1;
 definePlayerTank();
 /////////////////////////////////////////////////
 ///////////////enemy tanks attributes////////////
-var enemyTank1 =  new tank(3,88,"../tanks/enemytank1.png","23%","7%",true);
-var enemyTank2 =  new tank(4,88,"../tanks/enemytank2.png","13%","13%",false);
-var enemyTank3 = new tank(5,88,"../tanks/enemytank3.png","16%","13%",true);
+var enemyTank1 =  new tank(3,88,"../images/enemytank1.png","23%","7%",true);
+var enemyTank2 =  new tank(4,88,"../images/enemytank2.png","13%","13%",false);
+var enemyTank3 = new tank(5,88,"../images/enemytank3.png","16%","13%",true);
 var enemyTanksList=[ enemyTank1,enemyTank2,enemyTank3];                // array of tank objects for the player character tanks
-var enemyTankIndex =2;
+var enemyTankIndex =1;
 defineEnmeyTank();
 //////////////////////////////////////////////
 
 var bulletFlame=document.getElementById("bulletFlame");
-var bullet=document.getElementById("bullet");
-
 var bullentFlamePos;
 
 var enemyBulletFlame =document.getElementById("enemyBulletFlame");
@@ -68,46 +70,70 @@ function movePlayerTank(event)
 {
   
      
-    if(event.keyCode == 39) //right arrow
+    switch(event.keyCode)
     {
+    case 39: //right arrow
         if(playerTanksList[playerTankIndex].position>0)
         {
         playerTanksList[playerTankIndex].position -=1;
         playerTankImage.style.right= playerTanksList[playerTankIndex].position +"%";
         }
-    }
-    else if(event.keyCode == 37) // left arrow
-    {  
+    break;
+    case 37: // left arrow
+     
         if(playerTanksList[playerTankIndex].position<30)
         {
             playerTanksList[playerTankIndex].position +=1;
         playerTankImage.style.right= playerTanksList[playerTankIndex].position +"%";
-        }
-    }else if(event.keyCode == 32)  // space 
+        }   
+    break;
+    case 38 : //up arrrow
+      if(bulletFired ==0)
+      {
+       curve-=150;
+       bulletPath.style.transformOrigin=curve +"% 250%";
+      }
+    break;
+    case 40: //down arrow 
+    if(bulletFired ==0)
     {
+     curve+=150;
+     bulletPath.style.transformOrigin=curve +"% 250%";
+     
+    }    break;
+    case 32:  // space
+    bulletPath.style.right =bullentFlamePos+"%"; 
+    bulletPath.style.display="block";
+       bulletPath.classList.add("bulletCurve")
        bulletFlame.style.display="block"; 
-       bullet.style.display="inline";
-       setTimeout(hideShot,400);
-       setTimeout(showBullet,100);  
-       setTimeout(hideBullet,5000);
-    }
- 
+       setTimeout(hideShot,200);
+       if(bulletFired ==0)
+       {
+       setTimeout(initBulletCurve,4000);
+       bulletFired=1;
+       }
+       totalShotsCount++; 
+    break;
+    } 
     bullentFlamePos=playerTanksList[playerTankIndex].position+8
-    bulletFlame.style.right=bullentFlamePos+"%"
+    bulletFlame.style.right=bullentFlamePos+"%";
+
 }
 
 
 function hideShot()
 {
     bulletFlame.style.display="none"; 
+    
 }
 
-function showBullet()
+function initBulletCurve()
 {
-    bullet.style.display="block"; 
-}
-function hideBullet()
-{
-    bullet.style.display="none"; 
+    bulletPath.style.display="none";
+    bulletPath.classList.remove("bulletCurve");
+    bulletFired=0;
+    enemyTurn();
+    
 }
 ///////////////////////////////////////////////
+

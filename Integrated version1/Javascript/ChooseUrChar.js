@@ -1,5 +1,5 @@
 var charindex=0;
-passedchar=0;
+
     
 function charslideshow()
 {
@@ -18,7 +18,7 @@ if (charindex >= slides.length)
 slides[charindex].style.display = "block"; 
 }
 
-
+//change this playerTankIndex
 
 function charnext()
 {

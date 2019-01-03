@@ -6,31 +6,52 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="characters.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/ChooseUrChar.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/badgesfunc.css" />
 
 </head>
 
 <body>
  <div class="bgdiv">
-                <img src="bg.jpg" alt="">
+                <img src="../images/bg.jpg" alt="">
+
+
+                <div class="dropDown">
+                        <button class="dropBtn">Badges</button>
+                        <div class="dropDown-content" >
+                       <div id="badgeModal" class="badgeModal">
+                        <div class="description">
+                      <span class="closeBadge">&times;</span>
+                         <p id="badgeDesc"></p>
+                        </div>
+                       </div>                          
+                       
+
+                          <img id="badge1" src="../images/badge1.png">
+                          <img id="badge2" src="../images/badge2.png">
+                          <img id="badge3" src="../images/badge3.png">
+                          <img id="badge4" src="../images/badge4.png">
+                        
+                        </div>
+                      </div>
 
                 <div id="charcontainer" >
                         <div id="tankTextDiv">
                             <h1 id="tankTextChoose" >Choose Your Tank:</h1>    
                         </div>
                         <div class="tanks fade">
-                                <img src="tank1.png" alt="tank1">
+                                <img src="../images/tank1.png" alt="tank1">
 
                         </div>
 
 
                         <div style="display:none;" class="tanks fade">
-                                <img src="rsz_tank2.png" alt="tank2">
+                                <img src="../images/tank2.png" alt="tank2">
 
                         </div>
 
                         <div style="display:none;" class="tanks fade">
-                                <img src="rsz_tank3.png" alt="tank3">
+                                <img src="../images/tank3.png" alt="tank3">
 
                         </div>
                         <div  class="arrowbtns">
@@ -48,7 +69,7 @@
                 
                         <input type="button" class="sumbitBtn" id="doneBtn" name="" value="DONE">
 
-                        <a href="lvls.html"> <input type="button" class="sumbitBtn" id="battleBtn" name="" value="To The BATTLE"> </a>
+                        <a href=""> <input type="button" class="sumbitBtn" id="battleBtn" name="" value="To The BATTLE"> </a>
         
  
   
@@ -57,15 +78,15 @@
            <h1 id="lvlTextChoose" >Choose Your level:</h1>    
           </div>     
         <div class="levels fade">
-        <img src="game_bg1.jpg" class="levelImages"alt="lvl1"  >                   
+        <img src="../images/game_bg1.jpg" class="levelImages"alt="lvl1"  >                   
         </div>
                                               
         <div style="display:none;" class="levels fade">
-        <img src="game_bg2.png" alt="lvl2"  >      
+        <img src="../images/game_bg2.png" alt="lvl2"  >      
         </div>
                             
         <div style="display:none;" class="levels fade">
-        <img  src="game_bg3.jpg" alt="lvl3" >                             
+        <img  src="../images/game_bg3.jpg" alt="lvl3" >                             
         </div>
         <div  class="arrowbtns">                 
         <input  type="button"  id="lvlprev" value="&#10094;" name="prev">
@@ -77,8 +98,9 @@
         <input type="button" class="sumbitBtn" id="lvlDoneBtn" name="" value="DONE">        
 
  </div>
-        <script src='characters.js'></script>
-        <script src='test.js'></script>
+        <script src="../javascript/ChooseUrChar.js"></script>
+        <script src="../javascript/badgesfunc.js"></script>
+      
 
 </body>
 

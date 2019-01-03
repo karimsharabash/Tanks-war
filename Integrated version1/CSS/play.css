@@ -1,16 +1,26 @@
 body,html{
     height: 100%;
+    width: 100%;
   margin: 0;
+  font-weight: bold;
+  font: bold;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-/*#bg{
-    background-image: url("game_bg1.jpg");
+#page3{
+    background-image: url("../images/game_bg1.jpg");
     height: 100%; 
+    widows: 100%;
     background-position: center;
     background-repeat: no-repeat;
-  background-size: cover;
+   background-size: cover;
+   opacity: 0.65;
+    display: none;
    
-}*/
+}
+
+
+
 #characterDiv{
     background-color:transparent;
     width: 20%;
@@ -114,33 +124,85 @@ body,html{
     width:2%;
     position: absolute;
     right : 86.5%;
-    bottom: 19.5%
+    bottom: 19.5%;
 }
-@keyframes move-bullet {
-  from {
-    transform: rotate(-45deg);
-  }
+
+.bullet{
+    /* display: none; */
+    background-color: black;
+    width: 1.5%;
+    height: 2.5%;
+    border-radius:50% ;
+}
+
+
+#playerBullet
+{
   
-  to {
-    transform: rotate(135deg);
+
+    display: none;
+    position: absolute;
+    right : 13%;
+    bottom: 22%;
+    transform-origin: -2500% 250%; 
+     /* display: none; */
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: alternate; */
+    /* animation: bulletCurve 4s linear infinite; //Chrome, Firefox 16+, IE 10+, Safari 5  */
+  
+}  
+.bulletCurve
+{
+    
+    animation: bulletCurveAnime 4s ; 
+   
+   
+}
+
+@keyframes bulletCurveAnime {
+    from {
+      transform:rotate(0deg); 
+    }
+    to { 
+      transform:rotate(-180deg); 
+    }
   }
+
+#enemyBullet
+{
+    display: none;
+ 
+    position: absolute;
+    right : 88%;
+    bottom: 22%;
+    transform-origin: 2500% 250%; 
 }
 
-#bullet {
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  margin: 200px;
-  animation: move-bullet 5s;
-  display:none;
+.enemyBulletCurve
+{
+    
+    animation: enemyBulletCurveAnime 4s ; 
+   
+   
 }
 
-#bullet::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ff0;
-  border-radius: 50%;
+@keyframes enemyBulletCurveAnime {
+    from {
+      transform:rotate(0deg); 
+    }
+    to { 
+      transform:rotate(180deg); 
+    }
+  }
+
+#begImg
+{
+    width: 10%;
+    height: 27%;
+    margin-left: 47%;
+    position: absolute;
+    bottom: 14%;
+  border-image: none;
+  
 
 }
