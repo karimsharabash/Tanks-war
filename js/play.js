@@ -14,17 +14,17 @@ var tank = function (id,positionX,img,$size,positionY,toFlip )
 
 ///////////////////////
 ////////////player tanks attributes///////////
-var tank1 =  new tank(0,5,"tanks/tank1.png","15%","12%",true);
-var tank2 =  new tank(1,5,"tanks/tank2.png","23%","9%",true);
-var tank3 = new tank(2,5,"tanks/tank3.png","17%","12%",false);
+var tank1 =  new tank(0,5,"../anks/tank1.png","15%","12%",true);
+var tank2 =  new tank(1,5,"../tanks/tank2.png","23%","9%",true);
+var tank3 = new tank(2,5,"../tanks/tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
 var playerTankIndex =0;
 definePlayerTank();
 /////////////////////////////////////////////////
 ///////////////enemy tanks attributes////////////
-var enemyTank1 =  new tank(3,88,"tanks/enemytank1.png","23%","7%",true);
-var enemyTank2 =  new tank(4,88,"tanks/enemytank2.png","13%","13%",false);
-var enemyTank3 = new tank(5,88,"tanks/enemytank3.png","16%","13%",true);
+var enemyTank1 =  new tank(3,88,"../tanks/enemytank1.png","23%","7%",true);
+var enemyTank2 =  new tank(4,88,"../tanks/enemytank2.png","13%","13%",false);
+var enemyTank3 = new tank(5,88,"../tanks/enemytank3.png","16%","13%",true);
 var enemyTanksList=[ enemyTank1,enemyTank2,enemyTank3];                // array of tank objects for the player character tanks
 var enemyTankIndex =2;
 defineEnmeyTank();
