@@ -12,15 +12,17 @@ function sound(src) {
         this.sound.pause();
     }    
 }
+
 function soundByIndex(var n);
 {
     if ( n == 0 ) //blast sound for 0 
     {
-        sound('sounds/Boom2.wav');
+       var bastsound = new sound('sounds/Boom2.wav');
     } else if (n == 1) { // sound for movment 
-        sound('sounds/FX1.wav');
+        var movment = new sound('sounds/FX1.wav');
     } else if (n==2)
     {
-        sound ('sounds/Percussion_24_SP.wav');
+       var shooting = new sound ('sounds/Percussion_24_SP.wav');
     }
 }
+ // this should be called soundByIndex(n).play()

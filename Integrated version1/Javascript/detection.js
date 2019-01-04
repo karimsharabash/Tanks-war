@@ -1,6 +1,7 @@
 /// position of the bullet >postion of the tank & < postion of the tank +8 
 var playerBulletRange = 0;
 var enemyBulletRange = 0;
+var enemyHit =0;
 function detectEnemyCollision()
 {   
  playerBulletRange = ( - curve/32) + bullentFlamePos;
@@ -8,7 +9,11 @@ function detectEnemyCollision()
  playerBulletRange-= enemyTanksList[enemyTankIndex].position ;
  console.log(playerBulletRange);
  //call the after collision function for enemy
- //if(playerBulletRange>=0 && playerBulletRange<=8)
+ if(playerBulletRange>=0 && playerBulletRange<=8)
+ {
+    enemyHit=1;
+    
+ }
 }
 
 
