@@ -1,4 +1,4 @@
-var success=0;
+var playerSuccess=0;
 function sound(src)
 {
     this.sound = document.createElement("audio");
@@ -21,12 +21,13 @@ var collisionFlame=document.getElementById("collisionFlame");
 var collisionPos;
 function playerHitEnemy()
 {
- success++;
+ playerSuccess++;
  hitSound.play();
  collisionPos=enemyTanksList[enemyTankIndex].position;
  collisionFlame.style.right=collisionPos +"%";
  setTimeout(hideCollision,300); 
  showCollision();
+ hitEffectEnemy();
 }
 
 function hideCollision()

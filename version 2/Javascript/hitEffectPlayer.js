@@ -1,39 +1,57 @@
 ///////////////////////////////////////////////
-// function to calculate damage 
-var healthBarWidth = getElementById('healthBar').width;
-var health = 80; ///## changhe to 80 
-var levelIndex = 0;
-var hitValue =0;
-function aliveOrNot()
+// function to calculate damage for player
+var healthBarWidthPlayer = getElementById('healthBar').width;
+var healthPlayer = 80; ///## changhe to 80 
+var levelIndex = 1;
+var hitValue=0;
+var modal = document.getElementById('gameOverModal');
+var span = document.getElementsByClassName("close")[0];
+var gameOverSound = new sound(" ../sound/gameOverSound.mp3");
+function aliveOrNotPlayer()
 {
-    if (health!=0)
+    if (healthPlayer!=0)
         return true;
     else 
-        return false
+        { openGameOverModal();}
 }
-function hitEffect()
+function hitEffectPlayer()
 {
     
-if(aliveOrNot)
+if(aliveOrNotPlayer)
 {
     
 switch(levelIndex){
 
 case 1:
     hitValue=10;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    healthPlayer-=hitValue;
+    healthBarWidthPlayer-=hitValue+"%";
     break;
 case 2: 
     hitValue=20;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    healthPlayer-=hitValue;
+    healthBarWidthPlayer-=hitValue+"%";
     break;
 case 3: 
     hitValue=40;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    healthPlayer-=hitValue;
+    healthBarWidthPlayer-=hitValue+"%";
     break;
 }
+}
+}
+
+function openGameOverModal()
+{
+
+modal.style.display = "block";
+gameOverSound.play();
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 }

@@ -1,48 +1,57 @@
 ///////////////////////////////////////////////
 // function to calculate damage for the enimy and move the health bar 
-var healthBarWidth = getElementById('enemyhealthBar').width;
-var health = 100;
-var levelIndex = 0;
-var hitValue =0;
-if (levelIndex==0)
-/*{
-    hitValue=10;
-    health.style.width-10%;
-    health-=hitValue;
-    if (health==0) {
-        function gameOver();
-    }
-}
-*/
-function aliveOrNot()
+var healthBarWidthEnemy = getElementById('enemyhealthBar').width;
+var healthEnemy = 80;
+var levelIndex = 1;
+hitValueEnemy =0;
+var modal1 = document.getElementById('youWinModal');
+var span1 = document.getElementsByClassName("close1")[0];
+var youWinSound = new sound(" ../sound/winSound.mp3");
+
+function aliveOrNotEnemy()
 {
-    if (health!=0)
+    if (healthEnemy!=0)
         return true;
     else 
-        return false
+        
+          { openYouWinModal();}
 }
-function hitEffectEnimy(){
-    
-if(aliveOrNot)
-{
-    
+function hitEffectEnemy(){    
+if(aliveOrNotEnemy){
+
+
 switch(levelIndex){
 
 case 1:
-    hitValue=10;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    hitValueEnemy=10;
+    healthEnemy-=hitValueEnemy;
+    healthBarWidthEnemy-=hitValueEnemy+"%";
     break;
 case 2: 
-    hitValue=20;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    hitValueEnemy=20;
+    healthEnemy-=hitValueEnemy;
+    healthBarWidthEnemy-=hitValueEnemy+"%";
     break;
 case 3: 
-    hitValue=40;
-    health-=hitValue;
-    healthBarWidth-=hitValue;
+    hitValueEnemy=40;
+    health-=hitValueEnemy;
+    healthBarWidthEnemy-=hitValueEnemy+"%";
     break;
 }
+}
+
+}
+function openYouWinModal()
+{
+
+modal1.style.display = "block";
+youWinSound.play();
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
 }
 }

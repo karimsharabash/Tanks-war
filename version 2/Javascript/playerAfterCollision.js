@@ -1,23 +1,23 @@
-var success=0;
-var collisionFlamePlayer=document.getElementById("collisionFlamePlayer");
-var collisionPos;
-function EnemyHitPlayer()
+var playerFail=0;
+var collisionFlamePlayer=document.getElementById("collisionFlame");
+var collisionPosPlayer;
+function enemyHitPlayer()
 {
-success++;
-hitSound = new sound("../sounds/explosion.wav");
-hitSound.play();
-collisionPos=playerTanksList[playerTankIndex].bottom;
-collisionFlamePlayer.style.bottom=collisionPos;
-setTimeout(showCollision,200);
-hideCollision();
+ playerFail++;
+ hitSound.play();
+ collisionPosPlayer=playerTanksList[playerTankIndex].position;
+ collisionFlamePlayer.style.right=collisionPosPlayer +"%";
+ setTimeout(hideCollisionPlayer,300); 
+ showCollisionPlayer();
+ hitEffectPlayer();
 }
 
-function hideCollision()
+function hideCollisionPlayer()
 {
     collisionFlamePlayer.style.display="none"; 
     
 }
-function showCollision()
+function showCollisionPlayer()
 {
     collisionFlamePlayer.style.display="block"; 
     
