@@ -15,7 +15,6 @@ var tank = function (id,positionX,img,$size,positionY,toFlip )
     this.height=positionY;
     this.flipOrNot=toFlip;     
 }
-
 ///////////////////////
 ////////////player tanks attributes///////////
 var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
@@ -37,7 +36,7 @@ defineEnmeyTank();
 //////////////////////////////////////////////
 
 var bulletFlame=document.getElementById("bulletFlame");
-var bullentFlamePos;
+var bullentFlamePos = playerTanksList[playerTankIndex].position+8;
 
 var enemyBulletFlame =document.getElementById("enemyBulletFlame");
 var enemyBulletFlamePos ; //should be changed when the enemy tank move ####
@@ -92,7 +91,7 @@ function movePlayerTank(event)
     case 38 : //up arrrow
       if(bulletFired ==0)
       {
-       curve-=150;
+       curve-=100;
        bulletPath.style.transformOrigin=curve +"% 250%";
       }
     break;
@@ -115,6 +114,7 @@ function movePlayerTank(event)
        bulletFired=1;
        }
        totalShotsCount++; 
+       detectEnemyCollision();
     break;
     } 
     bullentFlamePos=playerTanksList[playerTankIndex].position+8
