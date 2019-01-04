@@ -1,10 +1,11 @@
 
-
+ var playerTankIndex =0;
+ var enemyTankIndex =0;
+ definePlayerTank();
 function chooseChar()
 {
-  
-var playerTankIndex =charindex;
-definePlayerTank();
+   playerTankIndex =charindex;
+   definePlayerTank();
 }
 
 var charBtn=document.getElementById("charDoneBtn");
@@ -33,7 +34,8 @@ function chooseLvl()
         }
 
     }  
-
+     enemyTankIndex =levelIndex;
+    defineEnmeyTank();
 }
 
 var lvlBtn=document.getElementById("lvlDoneBtn");

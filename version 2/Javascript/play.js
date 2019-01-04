@@ -1,3 +1,4 @@
+
 var playerTankImage =document.getElementById("myCharacter");
 var enemyTankImage  =document.getElementById("enemyTank");
 var bulletPath = document.getElementById("playerBullet");
@@ -21,19 +22,18 @@ var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
 var tank2 =  new tank(1,5,"../images/tank2.png","23%","9%",true);
 var tank3 = new tank(2,5,"../images/tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
-
+// definePlayerTank();
 /////////////////////////////////////////////////
 ///////////////enemy tanks attributes////////////
 var enemyTank1 =  new tank(3,88,"../images/enemytank1.png","23%","7%",true);
 var enemyTank2 =  new tank(4,88,"../images/enemytank2.png","13%","13%",false);
 var enemyTank3 = new tank(5,88,"../images/enemytank3.png","16%","13%",true);
 var enemyTanksList=[ enemyTank1,enemyTank2,enemyTank3];                // array of tank objects for the player character tanks
-var enemyTankIndex =levelIndex;
-defineEnmeyTank();
+
 //////////////////////////////////////////////
 
 var bulletFlame=document.getElementById("bulletFlame");
-var bulletFlamePos = playerTanksList[playerTankIndex].position+8;
+var bulletFlamePos = playerTanksList[0].position+8;
 
 var enemyBulletFlame =document.getElementById("enemyBulletFlame");
 var enemyBulletFlamePos ; //should be changed when the enemy tank move ####

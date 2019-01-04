@@ -1,3 +1,4 @@
+var startplay=0;
 var interval=0;
 var creditsButton=document.getElementById("creditsBtn");
 var goToPage2=document.getElementById("usrBtn");
@@ -76,7 +77,7 @@ function page3()
     document.getElementById("page3").style.display="block";
     document.getElementById("characterName").textContent=playerName.value;
     interval =setInterval(beginGame, 850);
-
+    startplay=1;
 }
 
 function beginGame()
@@ -112,7 +113,8 @@ function beginGame()
     }
 
     flag++;
-
+    
+ 
 }
 
 
