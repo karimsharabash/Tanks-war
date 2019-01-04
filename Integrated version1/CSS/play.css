@@ -20,6 +20,12 @@ body,html{
    
 }
 
+#collisionFlame
+{
+
+display:none;
+position: absolute;
+}
 
 
 #characterDiv{
