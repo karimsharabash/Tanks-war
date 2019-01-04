@@ -9,13 +9,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/badgesfunc.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/indexx.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/play.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sound.css">
 
 
 </head>
-<body>  
+<body> 
+ 
+	<audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
   <div class="bgdiv" id="bgdiv">
 
     <img src="../images/bg.jpg" alt="">
+
+	
 
 
     <div id="page1">
@@ -46,6 +51,7 @@
 
 
     </div>
+    
 
     <div id="page2">
             <p id="playerName" ></p>
@@ -172,7 +178,14 @@
     </div>
 
     <img id="begImg">
-
+	<div class="sound-controll">
+		<form action="">
+			<div class="form-group">
+				<input type="checkbox" id="sound" />
+				<label for="sound" class="sound-icon"></label>
+			</div>
+		</form>
+	</div>
 
 
     <script src="../javascript/indexx.js"></script>
