@@ -12,7 +12,7 @@
 
 
 </head>
-<body>
+<body>  
   <div class="bgdiv" id="bgdiv">
 
     <img src="../images/bg.jpg" alt="">
@@ -21,24 +21,26 @@
     <div id="page1">
         
         <div class="welcomePage" id="welcomePage">
+            <form>
             <p id="wlcTxt"> <b>Welcome To Tanks War</b> </p>
-            <input class="userName" id="userName" type="text" placeholder="Please Enter your name"> 
+            <input  id="userName" type="text" placeholder="Please Enter your name" required> 
+            <p id="usrValidate" ></p>
             <br>
             <input class="sumbitBtn" id="usrBtn" type="button" value="DONE">
+            </form>
 
 
 
         </div> 
 
         <div class="creditsDiv" id="creditsDiv">
-        <div id="creditsModal" class="creditsModal">
+        <div id="creditsModal" class="creditsModal fade">
                 <div class="creditsDesc">
               <span id="closeCredits">&times;</span>
-                 <p id="creditsTxt">"Here are our credits"</p>
+                 <p id="creditsTxt">Developed by:<br> Aya Usama <br> Karim Sharabash <br> Kerolos Saad <br> Mariam Adel</p>
                 </div>
                </div> 
-               <input class="creditsBtn" id="creditsBtn" type="button" value="Credits">
-
+               <img id="creditsImg" src="../images/creditsImage.png">
             </div>
 
 
@@ -46,22 +48,23 @@
     </div>
 
     <div id="page2">
-
+            <p id="playerName" ></p>
             <div class="dropDown">
                     <button class="dropBtn">Badges</button>
                     <div class="dropDown-content" >
-                   <div id="badgeModal" class="badgeModal">
-                    <div class="description">
-                  <span class="closeBadge">&times;</span>
-                     <p id="badgeDesc"></p>
-                    </div>
-                   </div>                          
-                   
 
                       <img id="badge1" src="../images/badge1.png">
                       <img id="badge2" src="../images/badge2.png">
                       <img id="badge3" src="../images/badge3.png">
                       <img id="badge4" src="../images/badge4.png">
+
+                       <div id="badgeModal" class="badgeModal fade">
+                            <div class="badgeDetails">
+                          <span id="closeBadge">&times;</span>
+                             <p id="badgeDesc"></p>
+                            </div>
+                           </div> 
+                       
                     
                     </div>
                   </div>
@@ -77,12 +80,12 @@
 
 
                     <div style="display:none;" class="tanks fade">
-                            <img src="../images/tank2.png" alt="tank2">
+                            <img src="../images/rsz_tank2.png" alt="tank2">
 
                     </div>
 
                     <div style="display:none;" class="tanks fade">
-                            <img src="../images/tank3.png" alt="tank3">
+                            <img src="../images/rsz_tank3.png" alt="tank3">
 
                     </div>
                     <div  class="arrowbtns">
@@ -94,11 +97,8 @@
 
             </div>
 
-            <!-- <div class="tooltip">credits
-                    <span class="tooltiptext">Here the credits would be shown </span>
-                  </div> -->
             
-                    <input type="button" class="sumbitBtn" id="doneBtn" name="" value="DONE">
+                    <input type="button" class="sumbitBtn" id="charDoneBtn" name="" value="DONE">
 
                     <input type="button" class="sumbitBtn" id="battleBtn" name="" value="To The BATTLE"> 
     
@@ -160,10 +160,12 @@
             
                 
             </div>
-            <img id="begImg">
+            <!-- <div id="begCount">
+            
+            </div> -->
     </div>
 
-    
+    <img id="begImg">
 
 
 

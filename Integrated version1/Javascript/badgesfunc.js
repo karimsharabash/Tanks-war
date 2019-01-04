@@ -70,50 +70,47 @@ else
 // gameBadge();
 
 
-var modal = document.getElementById('badgeModal');
-var span = document.getElementsByClassName("closeBadge");
+var badgeWindow=document.getElementById("badgeModal");
+var spanBadge=document.getElementById("closeBadge");
 var badge1Desc=document.getElementById("badge1");
 var badge2Desc=document.getElementById("badge2");
 var badge3Desc=document.getElementById("badge3");
 var badge4Desc=document.getElementById("badge4");
 
-
- badge1Desc.onclick=function () {
-      
-  modal.style.display = "block";
+function DisplayBadge1()
+{
+     badgeWindow.style.display="block";
      document.getElementById("badgeDesc").textContent="This badge only for playing a game with us";
-
-}
-
-badge2Desc.onclick=function () {
-      
-     modal.style.display = "block";
-        document.getElementById("badgeDesc").textContent="If you took this badge then you are a good SHOOTER!";
-   
-   }
-badge3Desc.onclick=function () {
-      
-     modal.style.display = "block";
-        document.getElementById("badgeDesc").textContent="You are a FIGHTER !";
-   
-   }
-
-badge4Desc.onclick=function () {
-      
-     modal.style.display = "block";
-        document.getElementById("badgeDesc").textContent="You are extremely GORGEOUS!";
-   
-   }
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 
 
+function DisplayBadge2()
+{
+     badgeWindow.style.display="block";
+     document.getElementById("badgeDesc").textContent="If you took this badge then you are a good SHOOTER!";
+}
+
+function DisplayBadge3()
+{
+     badgeWindow.style.display="block";
+     document.getElementById("badgeDesc").textContent="You are a FIGHTER !";
+}
+
+function DisplayBadge4()
+{
+     badgeWindow.style.display="block";
+     document.getElementById("badgeDesc").textContent="You are extremely GORGEOUS!";
+}
+
+
+function HideBadge()
+{
+     badgeWindow.style.display="none";
+}
+
+badge1Desc.addEventListener('click', DisplayBadge1);
+badge2Desc.addEventListener('click', DisplayBadge2);
+badge3Desc.addEventListener('click', DisplayBadge3);
+badge4Desc.addEventListener('click', DisplayBadge4);
+
+spanBadge.addEventListener('click',HideBadge);

@@ -1,5 +1,5 @@
 var charindex=0;
-
+var chosenChar=0;
     
 function charslideshow()
 {
@@ -16,6 +16,8 @@ charindex++;
 if (charindex >= slides.length) 
 {charindex = 0}  
 slides[charindex].style.display = "block"; 
+chosenChar=charindex;
+
 }
 
 //change this playerTankIndex
@@ -23,7 +25,7 @@ slides[charindex].style.display = "block";
 function charnext()
 {
     charslideshow();
-    passedchar=charindex;
+   
 }
 
 var charnextt = document.getElementById("charnxt");
@@ -42,8 +44,10 @@ function charprevious()
     if (charindex <0) 
     {charindex = 2}  
     slides[charindex].style.display = "block"; 
-    passedchar=charindex;
+    chosenChar=charindex;
+    
 }
+
 var charprev = document.getElementById("charprev");
 charprev.addEventListener('click',charprevious);
 
@@ -52,8 +56,7 @@ charprev.addEventListener('click',charprevious);
 
 /////////////////levels choice script /////////////
 var lvlindex=0;
-var passedchar =0;
-if( passedchar ==1) console.log("hi");
+
 
 
 
@@ -66,14 +69,15 @@ function lvlslideshow()
     for(i=0 ; i<lvlslides.length; i++)
     {
         lvlslides[lvlindex].style.display="none";
-
     }
 
     lvlindex++;
+
     if(lvlindex>=lvlslides.length)
     {
         lvlindex=0;
     }
+
     lvlslides[lvlindex].style.display="block";
     
 }

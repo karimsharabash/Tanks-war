@@ -47,7 +47,7 @@
 
 
 
-  .badgeModal {
+  #badgeModal {
     display: none;
     position: fixed; 
     z-index: 1; 
@@ -62,7 +62,7 @@
   }
   
  
-  .description {
+  .badgeDetails {
     background-color: #4480da;
     margin-left: 25%;
     padding: 20px;
@@ -74,15 +74,15 @@
     
   }
   
-  .closeBadge {
+  #closeBadge {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .closeBadge:hover,
-  .closeBadge:focus {
+  #closeBadge:hover,
+  #closeBadge:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

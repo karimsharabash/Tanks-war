@@ -22,7 +22,9 @@ var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
 var tank2 =  new tank(1,5,"../images/tank2.png","23%","9%",true);
 var tank3 = new tank(2,5,"../images/tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
-var playerTankIndex =1;
+// var playerTankIndex =1;
+var playerTankIndex =chosenChar;
+//  here the function for changing the character 
 definePlayerTank();
 /////////////////////////////////////////////////
 ///////////////enemy tanks attributes////////////

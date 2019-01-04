@@ -13,6 +13,18 @@
     height: 100%;
 } 
 
+#playerName
+{
+    position: absolute;
+    color: rgb(6, 99, 99);
+    font-family: cursive;
+    margin-top: 1%;
+    margin-left: 35%;
+    z-index: 99;
+    font-size: xx-large;
+
+}
+
 #charbtn
 {
     background-color: rgb(223, 142, 142);
@@ -163,7 +175,7 @@ margin-left:81%;
       background-color:  rgb(169, 116, 219);
   }
 
-  #doneBtn
+  #charDoneBtn
   {
       position: absolute;
       bottom: 35%;
@@ -171,7 +183,7 @@ margin-left:81%;
       color:rgb(202, 0, 0);
   }
 
-  #doneBtn:hover
+  #charDoneBtn:hover
   {
       background-color:  rgb(169, 116, 219);
   }

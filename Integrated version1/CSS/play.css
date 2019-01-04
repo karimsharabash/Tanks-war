@@ -17,6 +17,7 @@ body,html{
    opacity: 0.65;
     display: none;
    
+   
 }
 
 
@@ -202,7 +203,19 @@ body,html{
     margin-left: 47%;
     position: absolute;
     bottom: 14%;
-  border-image: none;
-  
+   border-image: none;
+   display: none;
 
 }
+
+/* #begCount
+{
+    width: 12%;
+    height: 30%;
+    opacity: 1;
+    z-index: 99;
+    background-color: white;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 27%;
+} */
