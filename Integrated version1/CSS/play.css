@@ -213,6 +213,12 @@ position: absolute;
    display: none;
 
 }
+#collisionFlamePlayer
+{
+
+display:none;
+position: absolute;
+}
 
 /* #begCount
 {
