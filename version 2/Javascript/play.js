@@ -21,22 +21,19 @@ var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
 var tank2 =  new tank(1,5,"../images/tank2.png","23%","9%",true);
 var tank3 = new tank(2,5,"../images/tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
-// var playerTankIndex =1;
-var playerTankIndex =chosenChar;
-//  here the function for changing the character 
-definePlayerTank();
+
 /////////////////////////////////////////////////
 ///////////////enemy tanks attributes////////////
 var enemyTank1 =  new tank(3,88,"../images/enemytank1.png","23%","7%",true);
 var enemyTank2 =  new tank(4,88,"../images/enemytank2.png","13%","13%",false);
 var enemyTank3 = new tank(5,88,"../images/enemytank3.png","16%","13%",true);
 var enemyTanksList=[ enemyTank1,enemyTank2,enemyTank3];                // array of tank objects for the player character tanks
-var enemyTankIndex =1;
+var enemyTankIndex =levelIndex;
 defineEnmeyTank();
 //////////////////////////////////////////////
 
 var bulletFlame=document.getElementById("bulletFlame");
-var bullentFlamePos = playerTanksList[playerTankIndex].position+8;
+var bulletFlamePos = playerTanksList[playerTankIndex].position+8;
 
 var enemyBulletFlame =document.getElementById("enemyBulletFlame");
 var enemyBulletFlamePos ; //should be changed when the enemy tank move ####
@@ -45,6 +42,7 @@ document.addEventListener("keyup",movePlayerTank);
 
 function definePlayerTank()
 {
+    //playerTankIndex is defined when you press done i choose your character
     playerTankImage.src =  playerTanksList[playerTankIndex].image;
     playerTankImage.style.right=playerTanksList[playerTankIndex].position+"%";
     playerTankImage.style.height=playerTanksList[playerTankIndex].size;
@@ -103,22 +101,22 @@ function movePlayerTank(event)
      
     }    break;
     case 32:  // space
-    bulletPath.style.right =bullentFlamePos+"%"; 
+    bulletPath.style.right =bulletFlamePos+"%"; 
     bulletPath.style.display="block";
        bulletPath.classList.add("bulletCurve")
        bulletFlame.style.display="block"; 
        setTimeout(hideShot,200);
        if(bulletFired ==0)
        {
-       setTimeout(initBulletCurve,3400);
+       setTimeout(initBulletCurve,3200);
        bulletFired=1;
        }
        totalShotsCount++; 
        detectEnemyCollision();
     break;
     } 
-    bullentFlamePos=playerTanksList[playerTankIndex].position+8
-    bulletFlame.style.right=bullentFlamePos+"%";
+    bulletFlamePos=playerTanksList[playerTankIndex].position+8
+    bulletFlame.style.right=bulletFlamePos+"%";
 
 }
 
@@ -139,8 +137,8 @@ function initBulletCurve()
         playerHitEnemy();
         enemyHit=0;
     }
-    enemyTurn();
-    
+    setTimeout(enemyMove,500); //enenmy will move or not depened on the level then fire
+   
 }
 ///////////////////////////////////////////////
 

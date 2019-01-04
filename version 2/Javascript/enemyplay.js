@@ -1,13 +1,16 @@
 
 
 var enemyBullet = document.getElementById("enemyBullet");
+// var enemyTurn = false;
 var enemyCurve=1800;
+var levelIndex =0;
 
 function enemyTurn()
 {
- 
+    enemyBullet.style.right=enemyTanksList[enemyTankIndex].position +"%";
     switch(levelIndex)
     {
+       
         case 0: //easy level the computer fire randomly
         enemyCurve=2000+((Math.random()*10)*100);
         break;
@@ -31,5 +34,27 @@ function  initEnemyBullet()
     enemyBullet.style.display="none";
     enemyBullet.classList.remove("enemyBulletCurve");
     detectPlayerCollision();
-   
+    // enemyTurn =false ;
+}
+
+
+function enemyMove()
+{
+    switch(levelIndex)
+    {
+        case 0://for the easy and medium level move to random place when it get hit by player bullet
+        case 1:
+        if(enemyHitForMoving)
+        {
+            enemyTanksList[enemyTankIndex].position=92-((Math.random()*100)%30);
+        }
+        break;
+        case 2://move after every shot
+            enemyTanksList[enemyTankIndex].position=92-((Math.random()*100)%30);
+        break;
+
+    }
+    enemyTankImage.style.right=enemyTanksList[enemyTankIndex].position+"%";
+     setTimeout(enemyTurn,200);
+     enemyHitForMoving=0;
 }

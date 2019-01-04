@@ -2,9 +2,10 @@
 var playerBulletRange = 0;
 var enemyBulletRange = 0;
 var enemyHit =0;
+var enemyHitForMoving=0;//here
 function detectEnemyCollision()
 {   
- playerBulletRange = ( - curve/32) + bullentFlamePos;
+ playerBulletRange = ( - curve/33) + bulletFlamePos; //here
  // console.log(playerBulletRange);
  playerBulletRange-= enemyTanksList[enemyTankIndex].position ;
  console.log(playerBulletRange);
@@ -12,7 +13,7 @@ function detectEnemyCollision()
  if(playerBulletRange>=0 && playerBulletRange<=8)
  {
     enemyHit=1;
-    
+    enemyHitForMoving=1;
  }
 }
 
