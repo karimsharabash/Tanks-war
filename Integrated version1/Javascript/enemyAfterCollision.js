@@ -1,5 +1,6 @@
 var success=0;
-function sound(src) {
+function sound(src)
+{
     this.sound = document.createElement("audio");
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
@@ -9,23 +10,23 @@ function sound(src) {
     this.play = function(){
         this.sound.play();
     }
-    this.stop = function(){
+    this.stop = function()
+    {
         this.sound.pause();
     }    
 }
 
-
+hitSound = new sound("../sound/e.mp3");
 var collisionFlame=document.getElementById("collisionFlame");
 var collisionPos;
 function playerHitEnemy()
 {
-success++;
-hitSound = new sound("../sound/e.mp3");
-hitSound.play();
-collisionPos=enemyTanksList[enemyTankIndex].bottom;
-collisionFlame.style.bottom=collisionPos;
-setTimeout(showCollision,200);
-hideCollision();
+ success++;
+ hitSound.play();
+ collisionPos=enemyTanksList[enemyTankIndex].position;
+ collisionFlame.style.right=collisionPos +"%";
+ setTimeout(hideCollision,300); 
+ showCollision();
 }
 
 function hideCollision()

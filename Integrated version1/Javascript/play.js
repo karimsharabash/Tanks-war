@@ -110,7 +110,7 @@ function movePlayerTank(event)
        setTimeout(hideShot,200);
        if(bulletFired ==0)
        {
-       setTimeout(initBulletCurve,4000);
+       setTimeout(initBulletCurve,3400);
        bulletFired=1;
        }
        totalShotsCount++; 
@@ -134,6 +134,11 @@ function initBulletCurve()
     bulletPath.style.display="none";
     bulletPath.classList.remove("bulletCurve");
     bulletFired=0;
+    if(enemyHit)
+    {
+        playerHitEnemy();
+        enemyHit=0;
+    }
     enemyTurn();
     
 }

@@ -1,19 +1,9 @@
 ///////////////////////////////////////////////
 // function to calculate damage 
 var healthBarWidth = getElementById('healthBar').width;
-var health = 100;
+var health = 80; ///## changhe to 80 
 var levelIndex = 0;
 var hitValue =0;
-if (levelIndex==0)
-/*{
-    hitValue=10;
-    health.style.width-10%;
-    health-=hitValue;
-    if (health==0) {
-        function gameOver();
-    }
-}
-*/
 function aliveOrNot()
 {
     if (health!=0)
@@ -21,7 +11,8 @@ function aliveOrNot()
     else 
         return false
 }
-function hitEffect(){
+function hitEffect()
+{
     
 if(aliveOrNot)
 {
