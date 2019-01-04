@@ -1,0 +1,12 @@
+    .aimWrapper{
+    	width: 500px;
+        position: absolute;
+        bottom: 100px;
+        right: 300px;
+    }
+
+    .aimWrapper .aimCanvas {
+        transform-origin: bottom right;
+        transform: rotate(-25deg);
+        transition: transform 0.1s;
+    }
