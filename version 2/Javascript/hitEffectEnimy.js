@@ -1,9 +1,8 @@
 ///////////////////////////////////////////////
 // function to calculate damage for the enimy and move the health bar 
-var healthBarWidthEnemy = getElementById('enemyhealthBar').width;
+var healthBarWidthEnemy = document.getElementById('enemyhealthBar');
 var healthEnemy = 80;
-var levelIndex = 1;
-hitValueEnemy =0;
+var hitValueEnemy =0;
 var modal1 = document.getElementById('youWinModal');
 var span1 = document.getElementsByClassName("close1")[0];
 var youWinSound = new sound(" ../sound/winSound.mp3");
@@ -19,25 +18,27 @@ function aliveOrNotEnemy()
 function hitEffectEnemy(){    
 if(aliveOrNotEnemy){
 
+     switch(levelIndex)
+     {
 
-switch(levelIndex){
-
-case 1:
-    hitValueEnemy=10;
+    case 0:
+    hitValueEnemy=30;
     healthEnemy-=hitValueEnemy;
-    healthBarWidthEnemy-=hitValueEnemy+"%";
+   
     break;
-case 2: 
+    case 1: 
+    hitValueEnemy=25;
+    healthEnemy-=hitValueEnemy;
+   
+    break;
+    case 2: 
     hitValueEnemy=20;
     healthEnemy-=hitValueEnemy;
-    healthBarWidthEnemy-=hitValueEnemy+"%";
-    break;
-case 3: 
-    hitValueEnemy=40;
-    health-=hitValueEnemy;
-    healthBarWidthEnemy-=hitValueEnemy+"%";
+
     break;
 }
+  healthBarWidthEnemy.style.width=healthEnemy+"%";
+
 }
 
 }

@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////
 // function to calculate damage for player
-var healthBarWidthPlayer = getElementById('healthBar').width;
+var healthBarWidthPlayer = document.getElementById('healthBar');
 var healthPlayer = 80; ///## changhe to 80 
-var levelIndex = 1;
+
 var hitValue=0;
 var modal = document.getElementById('gameOverModal');
 var span = document.getElementsByClassName("close")[0];
@@ -22,23 +22,24 @@ if(aliveOrNotPlayer)
     
 switch(levelIndex){
 
-case 1:
-    hitValue=10;
-    healthPlayer-=hitValue;
-    healthBarWidthPlayer-=hitValue+"%";
-    break;
-case 2: 
+case 0:
     hitValue=20;
     healthPlayer-=hitValue;
-    healthBarWidthPlayer-=hitValue+"%";
+
     break;
-case 3: 
-    hitValue=40;
+case 1: 
+    hitValue=30;
     healthPlayer-=hitValue;
-    healthBarWidthPlayer-=hitValue+"%";
+   
+    break;
+case 2: 
+    hitValue=35;
+    healthPlayer-=hitValue;
+ 
     break;
 }
 }
+healthBarWidthPlayer.style.width=healthPlayer+"%"
 }
 
 function openGameOverModal()

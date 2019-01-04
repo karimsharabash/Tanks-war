@@ -25,7 +25,7 @@ function enemyTurn()
     enemyBullet.style.transformOrigin=enemyCurve +"% 250%";
     enemyBullet.style.display="block";
     enemyBullet.classList.add("enemyBulletCurve"); 
-    setTimeout(initEnemyBullet,3800);
+    setTimeout(initEnemyBullet,3200);
 }
 
 

@@ -92,6 +92,7 @@ function movePlayerTank(event)
        curve-=100;
        bulletPath.style.transformOrigin=curve +"% 250%";
       }
+      
     break;
     case 40: //down arrow 
     if(bulletFired ==0)
