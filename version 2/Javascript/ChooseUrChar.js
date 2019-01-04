@@ -1,5 +1,10 @@
 var charindex=0;
-var chosenChar=0;
+var lvlindex=0;
+var htpModal = document.getElementById("htpModal");
+var spanHtp=document.getElementById("closeHtp");
+var htpImg=document.getElementById("htpImg");
+chosenChar=0;
+levelIndex=0;
     
 function charslideshow()
 {
@@ -15,8 +20,8 @@ for (i=0; i< slides.length; i++)
 charindex++;
 if (charindex >= slides.length) 
 {charindex = 0}  
+
 slides[charindex].style.display = "block"; 
-chosenChar=charindex;
 
 }
 
@@ -25,6 +30,7 @@ chosenChar=charindex;
 function charnext()
 {
     charslideshow();
+    chosenChar=charindex;
    
 }
 
@@ -53,13 +59,6 @@ charprev.addEventListener('click',charprevious);
 
 
 
-
-/////////////////levels choice script /////////////
-var lvlindex=0;
-
-
-
-
 function lvlslideshow()
 {
 
@@ -85,6 +84,7 @@ function lvlslideshow()
 function lvlnext()
 {
     lvlslideshow();
+    levelIndex=lvlindex;
 }
 
 var lvlnxt=document.getElementById("lvlnxt");
@@ -106,9 +106,26 @@ function lvlprevious()
     {
         lvlindex=2;
     }
+
     lvlslides[lvlindex].style.display="block";
+    levelIndex=lvlindex;
 
 }
 
 var lvlprev=document.getElementById("lvlprev");
 lvlprev.addEventListener('click', lvlprevious);
+
+
+function DisplayHtp()
+{
+    htpModal.style.display="block";
+}
+
+function HideModal()
+{
+    htpModal.style.display="none";
+}
+
+htpImg.addEventListener('click',DisplayHtp);
+spanHtp.addEventListener('click' ,HideModal);
+

@@ -1,9 +1,7 @@
 
 
 var enemyBullet = document.getElementById("enemyBullet");
-// var enemyTurn = false;
 var enemyCurve=1800;
-var levelIndex =2;
 
 function enemyTurn()
 {
@@ -33,5 +31,5 @@ function  initEnemyBullet()
     enemyBullet.style.display="none";
     enemyBullet.classList.remove("enemyBulletCurve");
     detectPlayerCollision();
-    // enemyTurn =false ;
+   
 }

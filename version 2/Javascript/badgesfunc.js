@@ -67,8 +67,6 @@ else
 
 }
 
-// gameBadge();
-
 
 var badgeWindow=document.getElementById("badgeModal");
 var spanBadge=document.getElementById("closeBadge");

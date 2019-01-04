@@ -6,8 +6,12 @@ var creditsWindow=document.getElementById("creditsModal");
 var spanCredits=document.getElementById("closeCredits");
 var creditsImg=document.getElementById("creditsImg");
 var playerName=document.getElementById("userName");
-
-
+var story = document.getElementById("storyModal");
+var spanStory=document.getElementById("closeStory");
+var storyImg=document.getElementById("storyImg");
+var i = 0;
+var storyTxt = 'We developed Tanks War as a single player Version of the Famous game World of tanks which is a multiplayer game developed by Belarusian company Wargaming';
+var speed = 100;
 
 
 function DisplayCredits()
@@ -23,8 +27,28 @@ function HideCredits()
 creditsImg.addEventListener('click', DisplayCredits);
 spanCredits.addEventListener('click',HideCredits);
 
+function DisplayStory()
+{   
+    StoryWriter();
+    story.style.display="block";
+}
+
+function HideStory()
+{
+    story.style.display="none";
+}
+
+storyImg.addEventListener('click', DisplayStory);
+spanStory.addEventListener('click',HideStory);
 
 
+function StoryWriter() {
+  if (i < storyTxt.length) {
+    document.getElementById("storyTxt").textContent += storyTxt.charAt(i);
+    i++;
+    setTimeout(StoryWriter, speed);
+  }
+}
 
 
 
@@ -46,9 +70,11 @@ goToPage2.addEventListener('click',page2);
 
 
 function page3()
-{
+{   
+    document.getElementById("badge1").style.opacity="1";
     document.getElementById("bgdiv").style.display="none";
     document.getElementById("page3").style.display="block";
+    document.getElementById("characterName").textContent=playerName.value;
     interval =setInterval(beginGame, 850);
 
 }
@@ -80,7 +106,7 @@ function beginGame()
         {
             clearInterval(interval);
             document.getElementById("begImg").style.display="none";
-            document.getElementById("page3").style.opacity="1";
+            document.getElementById("bgPlay").style.opacity="1";
             break;
         }
     }

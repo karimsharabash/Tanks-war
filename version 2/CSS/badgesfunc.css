@@ -27,12 +27,14 @@
     z-index: 1;
     left: 26%;
    
+   
 }
 
   .dropDown-content img{
 
     width: 49%;
     height: 35%;
+    opacity: 0.7;
   }
 
   .dropDown-content img:hover
@@ -59,19 +61,21 @@
     overflow: auto; 
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4); 
+    
   }
   
  
   .badgeDetails {
-    background-color: #4480da;
-    margin-left: 25%;
+    background-color: teal;
+    margin-left: 34%;
+    margin-top: 14%;
     padding: 20px;
     width: 30%;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: darkred;
     border-radius: 20%;
     font-size: 24px;
-    
+   
   }
   
   #closeBadge {

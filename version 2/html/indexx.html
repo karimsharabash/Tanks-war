@@ -9,18 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/badgesfunc.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/indexx.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/play.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/sound.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/sound.css"> -->
 
 
 </head>
-<body> 
- 
-	<audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
+<body>  
+
+ <audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
   <div class="bgdiv" id="bgdiv">
 
     <img src="../images/bg.jpg" alt="">
-
-	
 
 
     <div id="page1">
@@ -31,7 +29,7 @@
             <input  id="userName" type="text" placeholder="Please Enter your name" required> 
             <p id="usrValidate" ></p>
             <br>
-            <input class="sumbitBtn" id="usrBtn" type="button" value="DONE">
+            <input class="sumbitBtn" id="usrBtn" type="button" value="READY?">
             </form>
 
 
@@ -48,10 +46,16 @@
                <img id="creditsImg" src="../images/creditsImage.png">
             </div>
 
-
-
+            <div id="storyDiv" >
+             <div id="storyModal" class="storyModal fade">
+             <div class="storyDesc">
+            <span id="closeStory">&times;</span>
+            <p id="storyTxt"></p>
+              </div>
+            </div> 
+            <img id="storyImg" src="../images/story.png" alt="">
+            </div>
     </div>
-    
 
     <div id="page2">
             <p id="playerName" ></p>
@@ -130,23 +134,38 @@
     <input  type="button"  id="lvlnxt" value="&#10095;" name="nxt">
     </div>                           
 </div>                     
-    
-   
+       
     <input type="button" class="sumbitBtn" id="lvlDoneBtn" name="" value="DONE">  
 
-    </div>
+    <div id="howToPlay" >
+            <div id="htpModal" class="htpModal fade">
+            <div class="htpDesc">
+           <span id="closeHtp">&times;</span>
+           <p id="htpTxt">you have an Enemy you must defet it , <br> 
+            use the right and left arrows to control your tank ,<br>
+            use up and down arrows to control the curve of the bullet<br>
+            and finally try to win to gain some amazing badges ;) <br>  
+        </p>
+             </div>
+           </div> 
+           <img id="htpImg" src="../images/howtoplay.png" alt="">
+           </div>
 
-<!-- put here any other page with this bg -->
+           
+
+    </div>
+    
+
     </div>
 
     <div id="page3">
 
-
+        <img id="bgPlay" src="../images/game_bg1.jpg">
         <div id="playbg">
                
 
                 <div id="characterDiv">
-                    <h3 id="characterName">Karim</h3>
+                    <h3 id="characterName"></h3>
                     <div  class="Bars" id="healthBG"></div>
                     <div class="Bars"id="healthBar"></div>
                 </div>
@@ -168,31 +187,47 @@
             
                 
             </div>
-            <!-- <div id="begCount">
-            
-            </div> -->
+        
     </div>
 
     <img id="begImg">
-	<div class="sound-controll">
+
+    <!-- <div class="sound-controll">
 		<form action="">
 			<div class="form-group">
 				<input type="checkbox" id="sound" />
 				<label for="sound" class="sound-icon"></label>
 			</div>
-		</form>
-	</div>
+                </form>
 
+                <div class="play">
+                                <label for="play-popup-open" class="play-popup-open">Credits</label>
+                                <input type="checkbox" id="play-popup-open" />
+                                <div class="play-popup">
+                                        <div class="play-popup-content">
+                                                <label for="play-popup-open" class="play-popup-close">&times;</label>
+                                                <p>How to Play</p>
+                                                
+                                        </div>
+                                </div>
+                        </div>
+        
+                                
+                        <audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
+	</div> -->
 
     <script src="../javascript/indexx.js"></script>
     <script src="../javascript/ChooseUrChar.js"></script>
     <script src="../javascript/badgesfunc.js"></script>
     <script src="../javascript/play.js"></script>  
     <script src="../javascript/enemyplay.js"></script> 
-    <script src="../javascript/detection.js"></script>
+    <script src="../javascript/detection.js"></script> 
+    <script src="../javascript/changeCharFunc.js"></script> 
     <script src="../javascript/enemyAfterCollision.js"></script>
-    <!-- <script type="text/javascript" src="../javascript/hitEffectPlayer.js"></script>  -->
+
+       <!-- <script type="text/javascript" src="../javascript/hitEffectPlayer.js"></script>  -->
     <!-- <script type="text/javascript" src="../javascript/hitEffectEnimy.js"></script> -->
     <!-- <script type="text/javascript" src="gamesound.js"></script> -->
+
 </body>
 </html>

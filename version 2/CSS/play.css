@@ -8,16 +8,20 @@ body,html{
 }
 
 #page3{
-    background-image: url("../images/game_bg1.jpg");
+   
+    display: none;
+
+}
+
+#bgPlay
+{
     height: 100%; 
-    widows: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
    background-size: cover;
    opacity: 0.65;
-    display: none;
-   
-   
+  position: absolute;
 }
 
 #collisionFlame
@@ -97,7 +101,7 @@ bottom :16%;
 
 #myCharacter{
    
-    /* transform: rotateY(180deg); */
+  
     height: 16%;
     width: 9%;
     position: absolute;
@@ -117,7 +121,7 @@ bottom :16%;
 
 #bulletFlame
 {
-    /* transform: rotateY(90deg); */
+    
     display: none;
     height: 4%;
     width:2%;
@@ -138,7 +142,7 @@ bottom :16%;
 }
 
 .bullet{
-    /* display: none; */
+    
     background-color: black;
     width: 1.5%;
     height: 2.5%;
@@ -155,11 +159,8 @@ bottom :16%;
     right : 13%;
     bottom: 22%;
     transform-origin: -2500% 250%; 
-     /* display: none; */
-    /* animation-fill-mode: forwards; */
-    /* animation-direction: alternate; */
-    /* animation: bulletCurve 4s linear infinite; //Chrome, Firefox 16+, IE 10+, Safari 5  */
-  
+     
+
 }  
 .bulletCurve
 {
@@ -216,21 +217,4 @@ bottom :16%;
    display: none;
 
 }
-#collisionFlamePlayer
-{
 
-display:none;
-position: absolute;
-}
-
-/* #begCount
-{
-    width: 12%;
-    height: 30%;
-    opacity: 1;
-    z-index: 99;
-    background-color: white;
-    position: absolute;
-    margin-left: 45%;
-    margin-top: 27%;
-} */
