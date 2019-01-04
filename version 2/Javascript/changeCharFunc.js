@@ -2,25 +2,9 @@
 
 function chooseChar()
 {
-    switch(chosenChar)
-    {
-        case 0:
-        {
-            document.getElementById("myCharacter").src="../images/tank1.png";
-            break;
-        }
-        case 1:
-        {
-            document.getElementById("myCharacter").src="../images/rsz_tank2.png";
-            break;
-        }
-        case 2:
-        {
-            document.getElementById("myCharacter").src="../images/rsz_tank3.png";
-            break;
-        }
-
-    }
+  
+var playerTankIndex =charindex;
+definePlayerTank();
 }
 
 var charBtn=document.getElementById("charDoneBtn");
