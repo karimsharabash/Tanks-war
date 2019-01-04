@@ -86,14 +86,14 @@
   
  
   .creditsDesc {
-    background-color:teal;
+    background-color: navy;
     margin-left: 38%;
     margin-top: 9.5%;
     padding: 20px;
     width: 25%;
     height: 25%;
     text-align: center;
-    color:rgb(121, 33, 33);
+    color: white;
     border-radius: 7%;
     font-size: 24px;
   }
@@ -173,14 +173,14 @@
   
  
   .storyDesc {
-    background-color: teal;
+    background-color:navy;
     margin-left: 38%;
     margin-top: 9.5%;
     padding: 20px;
     width: 25%;
     height: 25%;
     text-align: center;
-    color: rgb(131, 16, 16);
+    color:white;
     border-radius: 7%;
     font-size: 24px;
   }
