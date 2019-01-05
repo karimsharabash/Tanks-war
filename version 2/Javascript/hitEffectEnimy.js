@@ -1,3 +1,4 @@
+
 ///////////////////////////////////////////////
 // function to calculate damage for the enimy and move the health bar 
 var healthBarWidthEnemy = document.getElementById('enemyhealthBar');
@@ -7,17 +8,19 @@ var modal1 = document.getElementById('youWinModal');
 var span1 = document.getElementsByClassName("close1")[0];
 var youWinSound = new sound(" ../sound/winSound.mp3");
 
-function aliveOrNotEnemy()
-{
-    if (healthEnemy!=0)
-        return true;
-    else 
-        
-          { openYouWinModal();}
-}
-function hitEffectEnemy(){    
-if(aliveOrNotEnemy){
+// function aliveOrNotEnemy()
+// {
+//     if (healthEnemy!=0)
+//         return true;
+//     else 
+//        { openYouWinModal();}
+// }
 
+
+function hitEffectEnemy(){    
+if(healthEnemy>0)
+{
+  
      switch(levelIndex)
      {
 
@@ -37,22 +40,35 @@ if(aliveOrNotEnemy){
 
     break;
 }
+  if(healthEnemy <=0) 
+  {
+    healthEnemy =0;
+    openYouWinModal();
+
+  }
   healthBarWidthEnemy.style.width=healthEnemy+"%";
 
+}
+else
+{
+  openYouWinModal();
 }
 
 }
 function openYouWinModal()
 {
 
-modal1.style.display = "block";
+ document.getElementById("bgPlay").src= "../images/win.png";
+ document.getElementById("bgPlay").style.zIndex="2";
+ playingSound.pause();
 youWinSound.play();
-span1.onclick = function() {
-  modal1.style.display = "none";
+gameBadge();
+healthEnemy = 80;
+healthBarWidthEnemy.style.width=healthEnemy+"%";
+healthPlayer = 80;
+healthBarWidthPlayer.style.width=healthPlayer+"%";
+setTimeout(BackToPage2,500);
+// playingSound.pause();
+
 }
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
-}
+

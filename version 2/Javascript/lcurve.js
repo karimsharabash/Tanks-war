@@ -10,11 +10,14 @@ ctx.stroke();
 
 // Rotate aim
 var aimCurve = document.getElementById("aimCanvas");
+var curveCanvasid = document.getElementById("aimWrapper")
 var styles;
 var border = 29;
-var rotateInc = 1.5;
+var rotateInc = 1.8;
 function rotateAim(e) {
 
+	curveCanvasid.style.right=bulletFlamePos+"%";
+    
 	var styles = window.getComputedStyle(aimCurve, null);
 
 	var transform = styles.getPropertyValue("-webkit-transform") ||

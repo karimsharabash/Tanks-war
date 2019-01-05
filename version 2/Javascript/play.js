@@ -20,7 +20,7 @@ var tank = function (id,positionX,img,$size,positionY,toFlip )
 ////////////player tanks attributes///////////
 var tank1 =  new tank(0,5,"../images/tank1.png","15%","12%",true);
 var tank2 =  new tank(1,5,"../images/tank2.png","23%","9%",true);
-var tank3 = new tank(2,5,"../images/tank3.png","17%","12%",false);
+var tank3 = new tank(2,5,"../images/rsz_tank3.png","17%","12%",false);
 var playerTanksList=[ tank1,tank2,tank3];                // array of tank objects for the player character tanks
 // definePlayerTank();
 /////////////////////////////////////////////////
@@ -67,8 +67,8 @@ function defineEnmeyTank()
 
 function movePlayerTank(event)
 {
-  
-     
+    if(bulletFired ==0 )
+     {
     switch(event.keyCode)
     {
     case 39: //right arrow
@@ -92,7 +92,7 @@ function movePlayerTank(event)
        curve-=100;
        bulletPath.style.transformOrigin=curve +"% 250%";
       }
-      
+    
     break;
     case 40: //down arrow 
     if(bulletFired ==0)
@@ -100,7 +100,10 @@ function movePlayerTank(event)
      curve+=150;
      bulletPath.style.transformOrigin=curve +"% 250%";
      
-    }    break;
+    } 
+
+    
+    break;
     case 32:  // space
     bulletPath.style.right =bulletFlamePos+"%"; 
     bulletPath.style.display="block";
@@ -114,11 +117,12 @@ function movePlayerTank(event)
        }
        totalShotsCount++; 
        detectEnemyCollision();
+       curveCanvasid.style.display ="none";
     break;
     } 
     bulletFlamePos=playerTanksList[playerTankIndex].position+8
     bulletFlame.style.right=bulletFlamePos+"%";
-
+}
 }
 
 
@@ -139,7 +143,7 @@ function initBulletCurve()
         enemyHit=0;
     }
     setTimeout(enemyMove,500); //enenmy will move or not depened on the level then fire
-   
+    curveCanvasid.style.display ="block";
 }
 ///////////////////////////////////////////////
 

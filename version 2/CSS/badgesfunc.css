@@ -66,20 +66,21 @@
   
  
   .badgeDetails {
-    background-color: navy;
+    background-image: url(../images/popupbg.jpg);
+    background-position: bottom;
     margin-left: 34%;
     margin-top: 14%;
     padding: 20px;
     width: 30%;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 20%;
     font-size: 24px;
    
   }
   
   #closeBadge {
-    color: #aaaaaa;
+    color: #000000;
     float: right;
     font-size: 28px;
     font-weight: bold;

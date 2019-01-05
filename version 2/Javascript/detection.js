@@ -8,7 +8,7 @@ function detectEnemyCollision()
  playerBulletRange = ( - curve/33) + bulletFlamePos; //here
  // console.log(playerBulletRange);
  playerBulletRange-= enemyTanksList[enemyTankIndex].position ;
- console.log(playerBulletRange);
+//  console.log(playerBulletRange);
  //call the after collision function for enemy
  if(playerBulletRange>=0 && playerBulletRange<=8)
  {
@@ -20,7 +20,7 @@ function detectEnemyCollision()
 
 function detectPlayerCollision()
 {
-    enemyBulletRange = enemyTanksList[enemyTankIndex].position - (enemyCurve/33);
+    enemyBulletRange = enemyTanksList[enemyTankIndex].position - (enemyCurve/35);
     // console.log(playerBulletRange);
     //bulletflamepos is the position of the player bullet which is the position of first point of the player tank 
     enemyBulletRange-= playerTanksList[playerTankIndex].position ; 

@@ -9,17 +9,27 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/badgesfunc.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/indexx.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/play.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/curve.css" />
+    
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/sound.css"> -->
 
 
 </head>
 <body>  
 
- <audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
+ 
   <div class="bgdiv" id="bgdiv">
 
     <img src="../images/bg.jpg" alt="">
 
+        
+    <audio id="bkSound">  
+        <source src="../sound/gamebgsound.mp3" type="audio/mpeg">
+      </audio>
+      <div id="audioDiv">
+      <img id="soundPlay" src="../images/on.png">
+      <img id="mutePlay" src="../images/off.png">
+      </div>
 
     <div id="page1">
         
@@ -109,7 +119,7 @@
             </div>
 
             
-                    <input type="button" class="sumbitBtn" id="charDoneBtn" name="" value="DONE">
+                    <input type="button" class="sumbitBtn" id="charDoneBtn" name="" value="Choose">
 
                     <input type="button" class="sumbitBtn" id="battleBtn" name="" value="To The BATTLE"> 
     
@@ -136,7 +146,7 @@
     </div>                           
 </div>                     
        
-    <input type="button" class="sumbitBtn" id="lvlDoneBtn" name="" value="DONE">  
+    <input type="button" class="sumbitBtn" id="lvlDoneBtn" name="" value="Choose">  
 
     <div id="howToPlay" >
             <div id="htpModal" class="htpModal fade">
@@ -163,7 +173,13 @@
 
     <div id="page3">
 
+              
+    <audio id="playSoundTrack">  
+                <source src="../sound/playsound.mp3" type="audio/mpeg">
+              </audio>
+
         <img id="bgPlay" src="../images/game_bg1.jpg">
+
         <div id="playbg">
                
 
@@ -186,53 +202,21 @@
 
                 <div class="bullet" id="playerBullet"></div>
                 <div class="bullet" id="enemyBullet"></div>
-            
-            
-                <!-- <div id="gameOverModal">
+                <div id="aimWrapper">
+                        <canvas id="aimCanvas" width="500" height="500" class="aimCanvas"></canvas>
+                    </div>
+  
+                      
+ 
+        
+ </div>
+ 
+
 
   
-                        <div class="modal-content">
-                          <span class="close">&times;</span>
-                         <img src="gameOver.png" height="500" width="1000">
-                        </div>
-                      <div id="youWinModal">
-                      
-                        
-                        <div class="modal-content1">
-                          <span class="close">&times;</span>
-                         <img src="win.png" height="500" width="1000">
-                        </div>
-                      
-                      </div> -->
-            </div>
-        
-    </div>
-
+</div>
     <img id="begImg">
 
-    <!-- <div class="sound-controll">
-		<form action="">
-			<div class="form-group">
-				<input type="checkbox" id="sound" />
-				<label for="sound" class="sound-icon"></label>
-			</div>
-                </form>
-
-                <div class="play">
-                                <label for="play-popup-open" class="play-popup-open">Credits</label>
-                                <input type="checkbox" id="play-popup-open" />
-                                <div class="play-popup">
-                                        <div class="play-popup-content">
-                                                <label for="play-popup-open" class="play-popup-close">&times;</label>
-                                                <p>How to Play</p>
-                                                
-                                        </div>
-                                </div>
-                        </div>
-        
-                                
-                        <audio src="../sounds/PockettanksIn.mp3" autoplay="enable" id="bg-music"></audio>
-	</div> -->
 
     <script src="../javascript/indexx.js"></script>
     <script src="../javascript/ChooseUrChar.js"></script>
@@ -245,11 +229,8 @@
     <script src="../javascript/hitEffectEnimy.js"></script>
     <script src="../javascript/hitEffectPlayer.js"></script>
     <script src="../javascript/playerAfterCollision.js"></script>
+    <script  src="../javascript/lcurve.js"></script>
 
-
-       <!-- <script type="text/javascript" src="../javascript/hitEffectPlayer.js"></script>  -->
-    <!-- <script type="text/javascript" src="../javascript/hitEffectEnimy.js"></script> -->
-    <!-- <script type="text/javascript" src="gamesound.js"></script> -->
 
 </body>
 </html>

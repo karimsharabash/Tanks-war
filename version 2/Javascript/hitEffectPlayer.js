@@ -4,20 +4,19 @@ var healthBarWidthPlayer = document.getElementById('healthBar');
 var healthPlayer = 80; ///## changhe to 80 
 
 var hitValue=0;
-var modal = document.getElementById('gameOverModal');
-var span = document.getElementsByClassName("close")[0];
+
 var gameOverSound = new sound(" ../sound/gameOverSound.mp3");
-function aliveOrNotPlayer()
-{
-    if (healthPlayer!=0)
-        return true;
-    else 
-        { openGameOverModal();}
-}
+// function aliveOrNotPlayer()
+// {
+//     if (healthPlayer!=0)
+//         return true;
+//     else 
+//         { openGameOverModal();}
+// }
 function hitEffectPlayer()
 {
     
-if(aliveOrNotPlayer)
+if(healthPlayer>0)
 {
     
 switch(levelIndex){
@@ -38,21 +37,29 @@ case 2:
  
     break;
 }
+if(healthPlayer <=0)
+{
+    openGameOverModal();
+    healthPlayer=0;
 }
+}
+
 healthBarWidthPlayer.style.width=healthPlayer+"%"
 }
 
 function openGameOverModal()
 {
 
-modal.style.display = "block";
-gameOverSound.play();
-span.onclick = function() {
-  modal.style.display = "none";
+    document.getElementById("bgPlay").src= "../images/gameOver.png";
+    document.getElementById("bgPlay").style.zIndex="2";
+    playingSound.pause();
+    gameOverSound.play();
+    gameBadge();
+    healthPlayer = 80;
+    healthBarWidthPlayer.style.width=healthPlayer+"%"
+    healthEnemy = 80;
+    healthBarWidthEnemy.style.width=healthEnemy+"%";
+   setTimeout(BackToPage2,500);
+  
 }
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-}
+

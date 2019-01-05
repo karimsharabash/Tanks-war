@@ -1,7 +1,19 @@
-#gameOverModal,#youWinModal {
+#gameOverModal{
   display: none;
   position: fixed; 
-  z-index: 1; 
+  z-index: 0; 
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+#youWinModal {
+  display: none;
+  position: fixed; 
+  z-index: 0; 
   padding-top: 50px;
   left: 0;
   top: 0;
@@ -20,6 +32,13 @@
   width: 80%;
 }
 
+.modal-content1 {
+  background-color: transparent;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
 .close {
   color: #aaaaaa;
@@ -34,6 +53,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
 .close1 {
   color: #aaaaaa;
   float: right;

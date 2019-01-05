@@ -1,0 +1,16 @@
+    body {
+            overflow: hidden;
+    }
+    #aimWrapper{
+        
+    	width: 500px dotted;
+        position: absolute;
+        bottom: 23%;
+        right:14%;
+    }
+
+    #aimWrapper .aimCanvas {
+        transform-origin: bottom right;
+        transform: rotate(12deg);
+        transition: transform 0.2s;
+    }

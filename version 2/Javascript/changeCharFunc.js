@@ -1,7 +1,7 @@
 
  var playerTankIndex =0;
  var enemyTankIndex =0;
- definePlayerTank();
+
 function chooseChar()
 {
    playerTankIndex =charindex;

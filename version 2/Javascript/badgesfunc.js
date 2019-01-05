@@ -1,36 +1,36 @@
 var missedShots=0;
-roundPoints=0;
-points=0;
-score=0;
+var roundPoints=0;
+var points=0;
+var score=0;
 
 
 function gameBadge()
 {
 
-          points=roundScore(totalShotsCount, successScore);
+          points=roundScore(totalShotsCount, playerSuccess);
           score+=points;
 
      if(score>=45)
      {
-     document.getElementById("badge1").style.opacity="1";
-     document.getElementById("badge2").style.opacity="1";
-     document.getElementById("badge3").style.opacity="1";
      document.getElementById("badge4").style.opacity="1";
      }
 
      else if (score >=20 && score < 45)
      {
-     document.getElementById("badge1").style.opacity="1";
-     document.getElementById("badge2").style.opacity="1";
+
      document.getElementById("badge3").style.opacity="1";
-     document.getElementById("badge4").style.opacity="0.5";
+     
+     }
+     else if(score >=7 && score < 20)
+     {
+          document.getElementById("badge2").style.opacity="1";
      }
      else
      {
      document.getElementById("badge1").style.opacity="1";
-     document.getElementById("badge2").style.opacity="0.5";
-     document.getElementById("badge3").style.opacity="0.5";
-     document.getElementById("badge4").style.opacity="0.5";
+     document.getElementById("badge2").style.opacity="0.4";
+     document.getElementById("badge3").style.opacity="0.4";
+     document.getElementById("badge4").style.opacity="0.4";
      }
 
      roundPoints=0;
@@ -97,7 +97,7 @@ function DisplayBadge3()
 function DisplayBadge4()
 {
      badgeWindow.style.display="block";
-     document.getElementById("badgeDesc").textContent="You are extremely GORGEOUS!";
+     document.getElementById("badgeDesc").textContent="You are CONQUEROR!";
 }
 
 

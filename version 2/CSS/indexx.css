@@ -86,14 +86,15 @@
   
  
   .creditsDesc {
-    background-color: navy;
+    background-image: url(../images/popupbg.jpg);
+    background-position: bottom;
     margin-left: 38%;
     margin-top: 9.5%;
     padding: 20px;
     width: 25%;
     height: 25%;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 7%;
     font-size: 24px;
   }
@@ -112,7 +113,7 @@
 }
 
   #closeCredits {
-    color: #aaaaaa;
+    color: #000000;
     float: right;
     font-size: 28px;
   }
@@ -173,20 +174,21 @@
   
  
   .storyDesc {
-    background-color:navy;
+    background-image: url(../images/popupbg.jpg);
+    background-position: bottom;
     margin-left: 38%;
-    margin-top: 9.5%;
-    padding: 20px;
+    margin-top: 8.5%;
+    padding: 38px;
     width: 25%;
     height: 25%;
     text-align: center;
-    color:white;
+    color: black;
     border-radius: 7%;
     font-size: 24px;
   }
 
   #closeStory {
-    color: #aaaaaa;
+    color: #030303;
     float: right;
     font-size: 28px;
   }
@@ -198,4 +200,36 @@
     cursor: pointer;
   }
 
+
+#audioDiv
+{
+    position: absolute;
+    margin-top: 42%;
+    margin-left: 33%;
+    width: 67%;
+    height: 73%;
+}
+
+
+
+  #soundPlay
+{
+
+    width: 4.5%;
+    height: 7%;
+    margin-left: -48%;
+    margin-top: -10%;
+    cursor: pointer;
+}
+
+
+#mutePlay
+{
+    width: 4.5%;
+    height: 7%;
+    margin-left: 0;
+    cursor: pointer;
+    top: 8%;
+    left: 0%;
+}
 

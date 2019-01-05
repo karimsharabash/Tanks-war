@@ -13,6 +13,9 @@ var storyImg=document.getElementById("storyImg");
 var i = 0;
 var storyTxt = 'We developed Tanks War as a single player Version of the Famous game World of tanks which is a multiplayer game developed by Belarusian company Wargaming';
 var speed = 100;
+var playImg=document.getElementById("soundPlay");
+var muteImg=document.getElementById("mutePlay");
+var playingSound=document.getElementById("playSoundTrack");
 
 
 function DisplayCredits()
@@ -70,8 +73,22 @@ function page2()
 goToPage2.addEventListener('click',page2);
 
 
+function BackToPage2()
+{
+    
+    document.getElementById("page1").style.display="none";
+    document.getElementById("bgdiv").style.display="block";
+    document.getElementById("page2").style.display="block";
+    document.getElementById("page3").style.display="none";
+    document.getElementById("bgPlay").style.zIndex="0";
+    // document.getElementById("bgPlay").src= "../images/game_bg1.png";
+
+}
+
+
 function page3()
 {   
+    playingSound.play();
     document.getElementById("badge1").style.opacity="1";
     document.getElementById("bgdiv").style.display="none";
     document.getElementById("page3").style.display="block";
@@ -117,6 +134,26 @@ function beginGame()
  
 }
 
-
-
 goToPage3.addEventListener('click', page3);
+
+
+
+
+
+function playSound()
+{
+   
+    sound=document.getElementById("bkSound");
+    sound.play();
+}
+
+playImg.addEventListener('click', playSound);
+
+function muteSound()
+{
+
+    sound=document.getElementById("bkSound");
+    sound.pause();
+}
+
+muteImg.addEventListener('click', muteSound);
